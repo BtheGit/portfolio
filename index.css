@@ -11,7 +11,6 @@ html, body, .container {
   letter-spacing: 1px; 
 }
 
-
 a {
   text-decoration: none;
 }
@@ -75,6 +74,53 @@ a {
     font-size: 2.5em;
   }
 
+  #about-container {
+    width: 100%;
+    font-size: 1.3em;
+  }
+
+  #about-container::before {
+    content: 'About';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    font-size: 3em;
+    background-color: #4C4A4A;
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  .about-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about-container img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    margin: 20px;
+    box-shadow: 0 4px 10px 2px rgba(0,0,0,0.5);
+  }
+
+  .about-body {
+    margin: 20px;
+    text-align: center;
+  }
+
+  .about-body div {
+    font-size: 1.4em;
+    margin: 15px 0;
+  }
+
+  .about-body p {
+    font-family: 'Vollkorn', serif;
+    font-size: .8em;
+  }  
+
   #work-container {
     width: 100%;
   }
@@ -120,53 +166,6 @@ a {
     font-family: 'Vollkorn', serif;
     text-align: center;
     margin: 20px;
-  }
-
-  #about-container {
-    width: 100%;
-    font-size: 1.3em;
-  }
-
-  #about-container::before {
-    content: 'About';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 150px;
-    font-size: 3em;
-    background-color: #4C4A4A;
-    color: white;
-    margin: 15px 0;
-  }
-
-  .about-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #about-container img {
-    max-width: 250px;
-    height: auto;
-    border-radius: 50%;
-    margin: 20px;
-    box-shadow: 0 4px 10px 2px rgba(0,0,0,0.5);
-  }
-
-  .about-body {
-    margin: 20px;
-    text-align: center;
-  }
-
-  .about-body div {
-    font-size: 1.4em;
-    margin: 15px 0;
-  }
-
-  .about-body p {
-    font-family: 'Vollkorn', serif;
-    font-size: .8em;
   }
 
   #contact-container {
@@ -461,7 +460,6 @@ a {
   #work-container {
     opacity: 0;
     z-index: -10;
-    position: absolute;
     left: 0;
     top: 0;
     width: 50%;
@@ -472,12 +470,11 @@ a {
   }
 
   #work-container.active {
-    z-index: -5;
+    z-index: 0;
     opacity: 1;
   }
 
   .work-container-inner {
-    z-index: 10;
     width: 80%;
     height: 90%;  
     overflow-y: scroll;
@@ -485,36 +482,30 @@ a {
     flex-direction: column;
     align-items: center;
     transform: scaleX(-1);
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 25px -10px rgba(0,0,0,0.7), 0px -1px 10px rgba(0,0,0,0.2);
   }
 
   .work-card {
-    z-index: 20;
     position: relative;
-    margin: 15px;
-    height: 400px;
+    margin: 15px 0;
+    height: 350px;
     width: 500px;
     max-width: 80%;
     flex: 0 0 auto;
-    transition: all 500ms linear 400ms;
+    transition: all 600ms ease-in-out 400ms;
     opacity: 0;
-    overflow: hidden;
     transform: scaleX(-1);
     box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
-
   }
 
   .work-card img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     max-height: 100%;
     transition: filter 400ms ease-in-out;
   }
 
   .work-card:hover img {
-    filter: sepia(40%) brightness(80%);
+    filter: brightness(50%);
   }
 
   .active .work-card {
@@ -522,26 +513,26 @@ a {
   }
 
   .work-card figcaption {
-    font-family: 'Julius Sans One', sans-serif;
     z-index: 30;
+    font-family: 'Julius Sans One', sans-serif;
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 25%;
-    background: rgba(255,255,255,0.95);
-    opacity: 0;
-    transform: translateY(80%);
-    transition: all 400ms ease-out 700ms;
+    background: rgba(255,255,255,0.97);
+    box-shadow: 0px -5px 25px -10px rgba(0,0,0,0.7);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    opacity: 0;
+    transform: translateY(80%);
+    transition: all 500ms ease-in-out 700ms;
   }
 
   .active .work-card figcaption {
     opacity: 1;
     transform: translateY(0);
-    padding: 10px;
   }
 
   .work-card figcaption div {
@@ -549,7 +540,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.7em;
+    font-size: 1.6em;
     text-align: center;
   }
 
@@ -564,24 +555,24 @@ a {
   }
 
   .work-card figcaption a:hover {
-    color: #6D6D6D;
+    color: #818181;
   }
 
   .work-card > div {
-    z-index: 25;
     position: absolute;
-    height: 75%;
-    width: 100%;
+    height: 65%;
+    width: 90%;
+    top: 5%;
+    left: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 1.6em;
     text-align: center;
-    padding: 5%;
     opacity: 0;
-    transform: scale(0.5);
-    transition: transform 400ms ease-in-out, opacity 400ms linear;
+    transform: scale(0.7);
+    transition: all 400ms ease-in-out;
   }
 
   .work-card:hover > div {

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="A portfolio page for the second greatest Full Stack Developer raised in Nairobi, Kenya named Brendan Beltz currently working in the Washington, D.C. area. React.js, Redux, Node.js, Express.js, MongoDB, MySQL proficient.">
+  <meta property="og:url"                 content="http://www.brendanbeltz.com" />
+  <meta property="og:title"               content="Brendan Beltz - Web Developer Portfolio" />
+  <meta property="og:description"         content="Full stack web developer specializing in MERN stack. React, Redux, Node, Express" />
+  <meta property="og:site_name"           content="Brendan Beltz Web Developer Portfolio" />
+  <meta property="og:image"               content="http://www.brendanbeltz.com/assets/images/me.png" />
+	<title>Brendan Beltz - Full Stack Web Developer</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Vollkorn" rel="stylesheet">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="splash-button upper-left" id="button-about">About</div>
+    <div class="splash-button upper-right" id="button-work">Work</div>
+    <div class="splash-button lower-left" id="button-contact">Contact</div>
+    <div class="splash-button button-hidden" id="button-reset">×</div>
+    <div id="splash-bg">
+      <div class="splash-header">
+        <div class="header-name">Brendan Beltz<span>Full Stack Developer</span></div>
+        <div class="header-about">About</div>
+        <div class="header-work">Portfolio</div>
+        <div class="header-contact">Contact</div>
+      </div>
+    </div>
+    <div id="work-container">
+      <div class="work-container-inner">
+        <figure class="work-card">
+          <img src="./assets/images/doodledetectives.png" alt="Doodle Detectives">
+          <figcaption>
+            <div>Doodle Detectives</div>
+            <a href="https://github.com/BtheGit/doodle-detectives-gameroom"><i class="fa fa-code" aria-hidden="true"></i></a>
+            <a href="https://dd-trial.herokuapp.com/"><i class="fa fa-desktop" aria-hidden="true"></i></a>
+          </figcaption>
+          <div>
+            An online real-time multiplayer game built using React, Node, and Socket.io.
+          </div>
+        </figure>
+        <figure class="work-card">
+          <img src="./assets/images/localplaces.jpg" alt="Local Places">
+          <figcaption>
+            <div>Local Places</div>
+            <a href="https://github.com/BtheGit/local-places"><i class="fa fa-code" aria-hidden="true"></i></a>
+          </figcaption>
+          <div>
+            A web app to create personal collections of favorite local places and share with friends. Built with React and Google Maps API.
+          </div>
+        </figure>
+        <figure class="work-card">
+          <img src="./assets/images/tetris.png" alt="Tetris">
+          <figcaption>
+            <div>Tetris</div>
+            <a href="https://github.com/BtheGit/TetrisMultiplayer"><i class="fa fa-code" aria-hidden="true"></i></a>
+            <a href="https://tetrisclone.herokuapp.com/"><i class="fa fa-desktop" aria-hidden="true"></i></a>
+          </figcaption>
+          <div>
+            Online Tetris with multi-user rooms built with HTML5 Canvas, Node, and Socket.io.
+          </div>
+        </figure>
+        <figure class="work-card">
+          <img src="./assets/images/breakout.png" alt="Breakout">
+          <figcaption>
+            <div>Breakout</div>
+            <a href="https://github.com/BtheGit/BreakoutClone"><i class="fa fa-code" aria-hidden="true"></i></a>
+            <a href="https://bthegit.github.io/BreakoutClone/"><i class="fa fa-desktop" aria-hidden="true"></i></a>
+          </figcaption>
+          <div>
+            Breakout/Arkanoid clone built with dynamic level editing and difficulty ramping. Built in HTML5 Canvas.
+          </div>
+        </figure>
+      </div>
+    </div>
+    <div id="about-container">
+      <div class="about-inner-container">
+        <figure class="about-header">
+          <img src="./assets/images/me.png" alt="Brendan Beltz. The people's choice.">
+        </figure>
+        <div class="about-body">
+          <p>
+            Raised between America and Kenya. Traveled or lived in some 60 countries, most recently Taiwan. Speaks enough French, Chinese, and Swahili to order food or swear at crazy drivers. An avid star-gazer, hiker, and board gamer. PCT 2011 thru-hiker.
+          </p>
+          <div>
+            Experience
+          </div>
+          <p>
+            Previous experience in research, data analysis, and management offers me a valuable skill set for my development work. I specialize in React but my favorite flavor of Javascript is still my favorite flavor of ice-cream: french vanilla! (&lt;le div /&gt;)
+          </p>
+          <div>
+            Toolset
+          </div>
+          <p>
+            Javascript, ES6/7, React, Redux, Node, Express, Socket.io, MongoDB, MySQL, CSS3, SASS, HTML5, Agile, Scrum, Git.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="contact-container">
+      <div class="contact-main">
+        <div class="contact-email">
+          <a href="mailto:brendanbeltz@gmail.com">
+            brendanbeltz@gmail.com
+          </a>
+        </div>
+        <div class="contact-phone">
+          <a href="tel:+15716999612">
+            (571) 699-9612
+          </a>
+        </div>
+      </div>
+      <div class="contact-icon">
+        <a href="https://www.linkedin.com/in/brendanbeltz/">
+          <i class="fa fa-linkedin"></i> 
+        </a>
+      </div>
+      <div class="contact-icon">
+        <a href="https://github.com/BtheGit">
+          <i class="fa fa-github"></i>  
+        </a>
+      </div>
+    </div>
+  </div>
+	<script src="index.js"></script>
+</body>
+</html>

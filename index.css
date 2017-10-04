@@ -392,15 +392,15 @@ a {
   }
 
   .splash-top .splash-header {
-    transform: scale(1.5) perspective(1000px) rotateX(15deg);
+    transform: perspective(1000px) rotateX(15deg);
   }
 
   .splash-left .splash-header {
-    transform: scale(1.5) perspective(1000px) rotateY(-15deg)
+    transform: perspective(1000px) rotateY(-15deg)
   }
 
   .splash-right .splash-header {
-    transform: scale(1.5) perspective(1000px) rotateY(15deg)
+    transform: perspective(1000px) rotateY(15deg)
   }
 
   .splash-top .header-name {
@@ -434,7 +434,7 @@ a {
   }
 
   .header-about, .header-work, .header-contact {
-    font-size: 85px;
+    font-size: 1.65em;
     opacity: 0;
     color: white;
     transition: transform 350ms linear 200ms, opacity 350ms linear;

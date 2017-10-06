@@ -223,6 +223,9 @@ a {
 
   .splash-button {
     display: initial;
+    border: none;
+    background-color: initial;
+    font-family: 'Vollkorn', serif;
   }
 
   .container {
@@ -247,6 +250,7 @@ a {
     color: white;
     cursor: pointer;
     user-select: none;
+    visibility: initial;
   }
 
   .splash-button {
@@ -257,6 +261,7 @@ a {
   .splash-button.button-hidden {
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
   }
 
   .splash-button.upper-left {
@@ -287,6 +292,7 @@ a {
   }
 
   #button-reset {
+    visibility: initial;
     width: 50px;
     height: 50px;
     position: absolute;
@@ -313,6 +319,7 @@ a {
   }
 
   #button-reset.button-hidden {
+    visibility: hidden;
     transform: scale(0.5) rotateZ(25deg);
   }
 
@@ -458,6 +465,7 @@ a {
   /*############################################*/
 
   #work-container {
+    visibility: hidden;
     opacity: 0;
     z-index: -10;
     left: 0;
@@ -472,6 +480,7 @@ a {
   #work-container.active {
     z-index: 0;
     opacity: 1;
+    visibility: initial;
   }
 
   .work-container-inner {
@@ -585,9 +594,11 @@ a {
   #contact-container.active {
     z-index: 0;
     opacity: 1;
+    visibility: initial;
   }
 
   #contact-container {
+    visibility: hidden;
     opacity: 0;
     z-index:-10;
     position: absolute;

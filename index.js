@@ -11,6 +11,13 @@ const workContainer = document.getElementById('work-container')
 const contactContainer = document.getElementById('contact-container')
 const aboutContainer = document.getElementById('about-container')
 
+const bokehField = bokehfy(splashBG);
+bokehField.toggleBackground();
+bokehField.density(45);
+bokehField.framerate(35);
+bokehField.halflife(250);
+bokehField.recolor('#FFF');
+
 const buttons = [buttonAbout, buttonWork, buttonContact, buttonReset]
 const splashClasses = ['splash-top', 'splash-left', 'splash-right']
 const containerClasses = [workContainer, contactContainer, aboutContainer]
@@ -20,19 +27,36 @@ buttonWork.addEventListener('click', selectWork)
 buttonContact.addEventListener('click', selectContact)
 buttonReset.addEventListener('click', selectReset)
 
+function resetBokeh(){
+  bokehField.density(45);
+  bokehField.resize(35)
+  bokehField.framerate(35)
+  bokehField.halflife(250)
+}
+
+function focusBokeh() {
+  bokehField.density(15);
+  bokehField.resize(50)
+  bokehField.framerate(22)
+  bokehField.halflife(500);
+}
+
 function selectAbout(e) {
+  focusBokeh()
   toggleButtons()
   splashBG.classList.add('splash-left')
   aboutContainer.classList.add('active')
 }
 
 function selectWork(e) {
+  focusBokeh()
   toggleButtons()
   splashBG.classList.add('splash-right')
   workContainer.classList.add('active')
 }
 
 function selectContact(e) {
+  focusBokeh()
   toggleButtons()
   splashBG.classList.add('splash-top')
   contactContainer.classList.add('active')
@@ -41,6 +65,7 @@ function selectContact(e) {
 function selectReset(e) {
   toggleButtons()
   resetSplash()
+  resetBokeh()
 }
 
 function resetSplash(e) {
@@ -61,6 +86,8 @@ function toggleButtons(e) {
     button.classList.toggle('button-hidden')
   })
 }
+
+
 
 
 document.addEventListener('DOMContentLoaded', ()=> {

@@ -16,7 +16,7 @@ bokehField.toggleBackground();
 bokehField.density(45);
 bokehField.framerate(35);
 bokehField.halflife(250);
-bokehField.recolor('#FFF');
+bokehField.color('#FFF');
 
 const buttons = [buttonAbout, buttonWork, buttonContact, buttonReset]
 const splashClasses = ['splash-top', 'splash-left', 'splash-right']
@@ -29,14 +29,14 @@ buttonReset.addEventListener('click', selectReset)
 
 function resetBokeh(){
   bokehField.density(45);
-  bokehField.resize(35)
+  bokehField.radius(35)
   bokehField.framerate(35)
   bokehField.halflife(250)
 }
 
 function focusBokeh() {
   bokehField.density(15);
-  bokehField.resize(50)
+  bokehField.radius(50)
   bokehField.framerate(22)
   bokehField.halflife(500);
 }

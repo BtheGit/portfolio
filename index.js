@@ -12,11 +12,8 @@ const contactContainer = document.getElementById('contact-container')
 const aboutContainer = document.getElementById('about-container')
 
 const bokehField = bokehfy(splashBG);
-bokehField.toggleBackground();
-bokehField.density(45);
-bokehField.framerate(35);
-bokehField.halflife(250);
-bokehField.color('#FFF');
+bokehField.transparent(true);
+resetBokeh();
 
 const buttons = [buttonAbout, buttonWork, buttonContact, buttonReset]
 const splashClasses = ['splash-top', 'splash-left', 'splash-right']
@@ -28,10 +25,11 @@ buttonContact.addEventListener('click', selectContact)
 buttonReset.addEventListener('click', selectReset)
 
 function resetBokeh(){
-  bokehField.density(45);
-  bokehField.radius(35)
+  bokehField.density(50);
+  bokehField.radius(120)
   bokehField.framerate(35)
-  bokehField.halflife(250)
+  bokehField.halflife(750)
+  bokehField.star('white')
 }
 
 function focusBokeh() {
@@ -39,6 +37,7 @@ function focusBokeh() {
   bokehField.radius(50)
   bokehField.framerate(22)
   bokehField.halflife(500);
+  bokehField.color('white')
 }
 
 function selectAbout(e) {

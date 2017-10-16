@@ -7,6 +7,7 @@ const buttonContact = document.getElementById('button-contact')
 const buttonReset = document.getElementById('button-reset')
 
 const splashBG = document.getElementById('splash-bg')
+document.addEventListener('scroll', e => {console.log(e)})
 const workContainer = document.getElementById('work-container')
 const contactContainer = document.getElementById('contact-container')
 const aboutContainer = document.getElementById('about-container')

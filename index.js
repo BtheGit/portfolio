@@ -12,8 +12,13 @@ const workContainer = document.getElementById('work-container')
 const contactContainer = document.getElementById('contact-container')
 const aboutContainer = document.getElementById('about-container')
 
-const bokehField = bokehfy(splashBG);
-bokehField.transparent(true);
+const bokehField = bokehfy({
+  parent:splashBG,
+  transparent: true,
+  density: 30,
+  framerate: 35,
+  radius: 60,
+});
 resetBokeh();
 
 const buttons = [buttonAbout, buttonWork, buttonContact, buttonReset]
@@ -26,19 +31,21 @@ buttonContact.addEventListener('click', selectContact)
 buttonReset.addEventListener('click', selectReset)
 
 function resetBokeh(){
-  bokehField.density(50);
-  bokehField.radius(120)
-  bokehField.framerate(35)
-  bokehField.halflife(750)
-  bokehField.star('white')
+  bokehField.settings({
+    halflife: 900,
+    dx:10,
+    dy:0.2,
+    star: 'white'
+  })
 }
 
 function focusBokeh() {
-  bokehField.density(15);
-  bokehField.radius(50)
-  bokehField.framerate(22)
-  bokehField.halflife(500);
-  bokehField.color('white')
+  bokehField.settings({
+    halflife: 800,
+    dx:0.3,
+    dy:5,
+    color: 'white'
+  })  
 }
 
 function selectAbout(e) {

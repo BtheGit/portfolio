@@ -231,6 +231,10 @@ a {
     font-family: 'Vollkorn', serif;
   }
 
+  .splash-button:focus {
+    outline: none;
+  }
+
   .container {
     position: relative;
     overflow: hidden;

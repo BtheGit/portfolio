@@ -111,8 +111,8 @@ function scrollCards() {
 
 document.addEventListener('DOMContentLoaded', ()=> {
   console.log('%cWelcome to my portfolio!', "color: #00B0AE; font-size: 20px")
-  console.log("I'm currently looking for an awesome Frontend, Backend, or Full Stack position.")
-  console.log("I'm based in Washington DC but am open to relocate across America or Europe.")
+  console.log("I specialize in modern Javascript and React/Redux.")
+  console.log("I'm currently in Washington DC but am open to relocating.")
   console.log("%cbrendanbeltz@gmail.com", "font-size: 20px; color: purple;")
   console.log("%c(571) 699-9612", "font-size: 19px; color: #AC02AC;")
 })

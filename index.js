@@ -1,5 +1,18 @@
 'use strict'
 
+// ie11 polyfill for bokehfy support
+if (!Object.entries) {
+  Object.entries = function( obj ){
+    var ownProps = Object.keys( obj ),
+        i = ownProps.length,
+        resArray = new Array(i); // preallocate the Array
+    while (i--)
+      resArray[i] = [ownProps[i], obj[ownProps[i]]];
+    
+    return resArray;
+  };
+}
+
 const buttonAbout = document.getElementById('button-about')
 const buttonWork = document.getElementById('button-work')
 const buttonContact = document.getElementById('button-contact')

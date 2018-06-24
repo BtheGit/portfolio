@@ -114,7 +114,7 @@ function scrollCards() {
 }
 
 
-document.addEventListener('DOMContentLoaded', ()=> {
+document.addEventListener('DOMContentLoaded', function() {
   console.log('%cWelcome to my portfolio!', "color: #00B0AE; font-size: 20px")
   console.log("I specialize in modern Javascript and React/Redux.")
   console.log("I'm currently in Washington DC but am open to relocating.")

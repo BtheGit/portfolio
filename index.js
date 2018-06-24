@@ -18,9 +18,7 @@ workScrollable.addEventListener('scroll', debounce(scrollCards))
 const bokehField = bokehfy({
   parent:splashBG,
   transparent: true,
-  density: 30,
-  framerate: 35,
-  radius: 60,
+
 });
 resetBokeh();
 
@@ -35,19 +33,26 @@ buttonReset.addEventListener('click', selectReset)
 
 function resetBokeh(){
   bokehField.settings({
-    halflife: 900,
-    dx:10,
-    dy:0.2,
-    star: 'white'
+    halflife: 1200,
+    dx:5,
+    dy:3,
+    star: 'white',
+    density: 45,
+    framerate: 60,
+    radius: 80,
+    interactive: true,
   })
 }
 
 function focusBokeh() {
   bokehField.settings({
     halflife: 800,
+    framerate: 25,
+    density: 20,
     dx:0.3,
     dy:5,
-    color: 'white'
+    color: 'white',
+    interactive: false,
   })  
 }
 

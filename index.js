@@ -85,22 +85,22 @@ function selectReset(e) {
 }
 
 function resetSplash(e) {
-  splashClasses.map(className => {
+  splashClasses.map(function(className) {
     if (splashBG.classList.contains(className)){
       splashBG.classList.remove(className)
     }
   })
-  containerClasses.map(className => {
+  containerClasses.map(function(className) {
     if (className.classList.contains('active')){
       className.classList.remove('active')
     }
   })
   workScrollable.scrollTop = 0
-  workCards.forEach(card => card.classList.remove('visible'))
+  workCards.forEach(function(card) { card.classList.remove('visible') })
 }
 
 function toggleButtons(e) {
-  buttons.map(button => {
+  buttons.map(function(button) {
     button.classList.toggle('button-hidden')
   })
 }
@@ -108,7 +108,7 @@ function toggleButtons(e) {
 function scrollCards() {
   const halfCardHeight = 350 / 2;
   const target = window.innerHeight - workScrollable.offsetTop - halfCardHeight
-  workCards.forEach(el => {
+  workCards.forEach(function(el) {
     if (el.getBoundingClientRect().top < target) el.classList.add('visible')
   })
 }

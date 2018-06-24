@@ -18,7 +18,6 @@ workScrollable.addEventListener('scroll', debounce(scrollCards))
 const bokehField = bokehfy({
   parent:splashBG,
   transparent: true,
-
 });
 resetBokeh();
 
@@ -126,7 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // ##################### UTILITIES
 
 
-function debounce(func, wait = 5, immediate) {
+function debounce(func, wait, immediate) {
+  wait = wait || 5;
 	let timeout;
 	return function() {
 		const context = this, args = arguments;

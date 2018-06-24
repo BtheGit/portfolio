@@ -1,18 +1,5 @@
 'use strict'
 
-// ie11 polyfill for bokehfy support
-if (!Object.entries) {
-  Object.entries = function( obj ){
-    var ownProps = Object.keys( obj ),
-        i = ownProps.length,
-        resArray = new Array(i); // preallocate the Array
-    while (i--)
-      resArray[i] = [ownProps[i], obj[ownProps[i]]];
-    
-    return resArray;
-  };
-}
-
 const buttonAbout = document.getElementById('button-about')
 const buttonWork = document.getElementById('button-work')
 const buttonContact = document.getElementById('button-contact')
@@ -27,12 +14,16 @@ const aboutContainer = document.getElementById('about-container')
 const workScrollable = document.getElementById('work-scrollable')
 const workCards = document.querySelectorAll('.work-card')
 workScrollable.addEventListener('scroll', debounce(scrollCards))
+let bokehField;
 
-const bokehField = bokehfy({
-  parent:splashBG,
-  transparent: true,
-});
-resetBokeh();
+if (Object.entries) {
+  // No bokehfy in ie11
+  bokehField = bokehfy({
+    parent:splashBG,
+    transparent: true,
+  });
+  resetBokeh();
+}
 
 const buttons = [buttonAbout, buttonWork, buttonContact, buttonReset]
 const splashClasses = ['splash-top', 'splash-left', 'splash-right']
@@ -44,6 +35,9 @@ buttonContact.addEventListener('click', selectContact)
 buttonReset.addEventListener('click', selectReset)
 
 function resetBokeh(){
+  if(!Object.entries){
+    return;
+  }
   bokehField.settings({
     halflife: 1200,
     dx:5,
@@ -57,6 +51,9 @@ function resetBokeh(){
 }
 
 function focusBokeh() {
+  if(!Object.entries){
+    return;
+  }
   bokehField.settings({
     halflife: 800,
     framerate: 25,

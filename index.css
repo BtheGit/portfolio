@@ -20,6 +20,10 @@ a {
   letter-spacing: 5px;
 }
 
+canvas {
+  opacity: 0.2;
+}
+
 .header-name span {
   font-family: 'Vollkorn', serif;
   display: block;

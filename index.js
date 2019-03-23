@@ -39,13 +39,13 @@ function resetBokeh(){
     return;
   }
   bokehField.settings({
-    halflife: 1200,
-    dx:5,
-    dy:3,
+    halflife: 1600,
+    dx:3,
+    dy:1.8,
     star: 'white',
-    density: 45,
-    framerate: 60,
-    radius: 80,
+    density: 25,
+    framerate: 100,
+    radius: 200,
     interactive: true,
   });
 }
